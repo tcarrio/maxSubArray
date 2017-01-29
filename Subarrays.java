@@ -40,33 +40,34 @@ public class Subarrays {
         System.out.println("Beginning max subarrays algorithm testing");
 
         System.out.println("");
-        
-        for(int[] testArray : testArrays){
-            long startTime = System.nanoTime();
-            sum = maxSubSlow(testArray);
-            long totalTime = System.nanoTime() - startTime;
-            System.out.printf("Using maxSubSlow\tMax:%6d\tTime:%d\n", sum,totalTime);      
-        }
 
-        System.out.println("");
-
-        for(int[] testArray : testArrays){
-            long startTime = System.nanoTime();
-            sum = maxSubFaster(testArray);
-            long totalTime = System.nanoTime() - startTime;
-            System.out.printf("Using maxSubFaster\tMax:%6d\tTime:%d\n", sum,totalTime);      
-        }
-
-        System.out.println("");
-
+        System.out.printf("Using maxSubFastest:\n");
         for(int[] testArray : testArrays){
             long startTime = System.nanoTime();
             sum = maxSubFastest(testArray);
             long totalTime = System.nanoTime() - startTime;
-            System.out.printf("Using maxSubFastest\tMax:%6d\tTime:%d\n", sum,totalTime);      
+            System.out.printf("Size:%6d\tMax:%6d\tTime:%d\n", testArray.length, sum,totalTime);      
         }
 
+        System.out.println("");
 
+        System.out.printf("Using maxSubFaster:\n");
+        for(int[] testArray : testArrays){
+            long startTime = System.nanoTime();
+            sum = maxSubFaster(testArray);
+            long totalTime = System.nanoTime() - startTime;
+            System.out.printf("Size:%6d\tMax:%6d\tTime:%d\n", testArray.length, sum,totalTime);      
+        }        
+
+        System.out.println("");
+        
+        System.out.printf("Using maxSubSlow:\n");
+        for(int[] testArray : testArrays){
+            long startTime = System.nanoTime();
+            sum = maxSubSlow(testArray);
+            long totalTime = System.nanoTime() - startTime;
+            System.out.printf("Size:%6d\tMax:%6d\tTime:%d\n", testArray.length, sum,totalTime);      
+        }
     }
 
     public static int maxSubSlow(int[] tA){
