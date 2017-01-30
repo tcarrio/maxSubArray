@@ -1,0 +1,39 @@
+Beginning max subarrays algorithm testing
+
+Using maxSubFastest:
+Size:  1000	Max:   676	Time:50182
+Size:  5000	Max:  1073	Time:234069
+Size: 10000	Max:  1272	Time:441081
+Size: 20000	Max:  2578	Time:880369
+Size: 50000	Max:  2823	Time:580542
+Size:100000	Max:  2692	Time:539844
+
+Using maxSubFaster:
+Size:  1000	Max:   676	Time:7182027
+Size:  5000	Max:  1073	Time:17819330
+Size: 10000	Max:  1272	Time:18341217
+Size: 20000	Max:  2578	Time:76177570
+Size: 50000	Max:  2823	Time:469214856
+Size:100000	Max:  2692	Time:1850732211
+
+Using maxSubSlow:
+Size:  1000	Max:   676	Time:55881285
+Size:  5000	Max:  1073	Time:6054861529
+Size: 10000	Max:  1272	Time:48122903222
+Size: 20000	Max:  2578	Time:386393212436
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (safepoint.cpp:310), pid=1222, tid=0x00007f71af3f3700
+#  guarantee(PageArmed == 0) failed: invariant
+#
+# JRE version: OpenJDK Runtime Environment (8.0_121-b13) (build 1.8.0_121-b13)
+# Java VM: OpenJDK 64-Bit Server VM (25.121-b13 mixed mode linux-amd64 compressed oops)
+# Core dump written. Default location: /home/tom/Documents/ou/2017/W/CSE-361/proj01/core or core.1222
+#
+# An error report file with more information is saved as:
+# /home/tom/Documents/ou/2017/W/CSE-361/proj01/hs_err_pid1222.log
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#

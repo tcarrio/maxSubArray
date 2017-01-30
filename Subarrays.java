@@ -1,27 +1,5 @@
 import java.util.concurrent.ThreadLocalRandom;
 
-// Earlier test cases:
-// new int[]{},
-// new int[]{},
-// new int[]{1, -8, 2, -4, 0, 8, 3, 4}, 
-// new int[]{1, 7, -5, -1, 7},
-// new int[]{5, 3, -2, -7, 9, -1, 1, 4, 6, 2},
-// new int[]{-4, 12, -9, 2, 5, -21, 16, 4, -3, 6},
-// new int[]{3, -6, 9, -12, 7, 4, 2, 5, -6, 7} ,
-// new int[]{-1, -2, -3, -4, -5} ,
-// randomArray(10,10),
-// randomArray(100,100),
-//
-// Display test cases
-// System.out.printf("Using these test arrays:\n");
-// for(int l = 0; l < testArrays.length; l++){
-//     System.out.printf("Using test array %d: [ ",l+1);
-//     for( int i : testArrays[l]){
-//         System.out.printf("%3d ",i);
-//     }
-//     System.out.printf("]\n");
-// }
-
 public class Subarrays {
 
     private static int[][] testArrays = new int[][]{ 
@@ -46,7 +24,7 @@ public class Subarrays {
             long startTime = System.nanoTime();
             sum = maxSubFastest(testArray);
             long totalTime = System.nanoTime() - startTime;
-            System.out.printf("Size:%6d\tMax:%6d\tTime:%d\n", testArray.length, sum,totalTime);      
+            System.out.printf("Size:%6d\tMax:%6d\tTime:%d\n", testArray.length, sum,totalTime);
         }
 
         System.out.println("");
@@ -56,7 +34,7 @@ public class Subarrays {
             long startTime = System.nanoTime();
             sum = maxSubFaster(testArray);
             long totalTime = System.nanoTime() - startTime;
-            System.out.printf("Size:%6d\tMax:%6d\tTime:%d\n", testArray.length, sum,totalTime);      
+            System.out.printf("Size:%6d\tMax:%6d\tTime:%d\n", testArray.length, sum,totalTime);
         }        
 
         System.out.println("");
@@ -66,7 +44,7 @@ public class Subarrays {
             long startTime = System.nanoTime();
             sum = maxSubSlow(testArray);
             long totalTime = System.nanoTime() - startTime;
-            System.out.printf("Size:%6d\tMax:%6d\tTime:%d\n", testArray.length, sum,totalTime);      
+            System.out.printf("Size:%6d\tMax:%6d\tTime:%d\n", testArray.length, sum,totalTime);
         }
     }
 
@@ -111,7 +89,7 @@ public class Subarrays {
         for(int i=1;i<M.length;i++){
             int tM = M[i-1] + tA[i-1];
             if(tM>0)
-                M[i] = tM;            
+                M[i] = tM;
         }
         int tmax = 0;
         for(int i=0;i<M.length;i++){
