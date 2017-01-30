@@ -3,12 +3,12 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Subarrays {
 
     private static int[][] testArrays = new int[][]{ 
-        randomArray(1000,1000),
-        randomArray(5000,5000),
-        randomArray(10000,10000),
-        randomArray(20000,20000),
-        randomArray(50000,50000),
-        randomArray(100000,100000)
+        randomArray(1000),
+        randomArray(5000),
+        randomArray(10000),
+        randomArray(20000),
+        randomArray(50000),
+        randomArray(100000)
     };
     
     public static void main(String[] args){
@@ -99,7 +99,7 @@ public class Subarrays {
         return tmax;
     }
 
-    private static int[] randomArray(){
+    private static int[] randomLengthArray(){
         return randomArray(1,16);
     }
 
